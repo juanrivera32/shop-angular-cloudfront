@@ -21,6 +21,6 @@ export abstract class ApiService {
 
   /** Combines API endpoint and path into a single URL */
   protected getUrl(api: ApiEndpoint, path: string): string {
-    return Location.joinWithSlash(this.config.apiEndpoints[api], path);
+    return Location.joinWithSlash(this.config.apiEndpoints[api], `/api/${path}`);
   }
 }
